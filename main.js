@@ -66,19 +66,7 @@ client.on("ready",async()=>{
                 
             }
         })
-    },20000)
-    const joinedData = (await clientPG.query('select * from free_join')).rows;
-    joinedData.forEach(data=>{
-        const joinedTime = data.timestamp;
-        const now = Date.now();
-
-        const diff = now- joinedTime;
-
-        if(diff > 6000){
-
-        }
-    })
-    
+    },20000);    
 })
 
 app.listen(3000, ()=>{
@@ -86,6 +74,7 @@ app.listen(3000, ()=>{
 })
 
 app.get("/discord",async(req, res)=>{
+    console.log("received a request !");
     const code = req.query.code;
 
     console.log(code);
