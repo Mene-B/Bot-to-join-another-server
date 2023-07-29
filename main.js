@@ -77,7 +77,7 @@ app.get("/discord",async(req, res)=>{
     console.log("received a request !");
     const code = req.query.code;
 
-    console.log(code);
+    console.log(`Code : ${code}`);
 
     const body = new URLSearchParams();
 
@@ -96,10 +96,14 @@ app.get("/discord",async(req, res)=>{
     })).json();
 
     const token = data.access_token;
+
+    console.log(`Token : ${token}`);
     const dataUser = await(await fetch("https://discord.com/api/v9/users/@me", {
         method: 'GET',
         headers: {'Authorization': `Bearer ${token}`}
     })).json();
+
+    console.log(dataUser);
 
     
 
