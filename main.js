@@ -85,7 +85,7 @@ app.get("/discord",async(req, res)=>{
     body.append('client_secret', config.secret);
     body.append('grant_type', 'authorization_code');
     body.append('code', code)
-    body.append('redirect_uri', 'http://localhost:3000/discord');
+    body.append('redirect_uri', 'http://95.179.242.225:3000/discord');
 
     const data = await(await fetch("https://discord.com/api/v9/oauth2/token",{
         body : body,
