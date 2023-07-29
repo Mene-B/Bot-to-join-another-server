@@ -54,7 +54,7 @@ client.on("ready",async()=>{
             const diff = now- joinedTime;
             console.log(diff);
 
-            if(diff > 30000){
+            if(diff > 120000){
                 await client.guilds.cache.get(config.guildPremiumID).members.fetch();
                 const member = client.guilds.cache.get(config.guildPremiumID).members.cache.get(data.user_id);
                 if(member?.roles?.cache?.has(config.joiningRoleID)){
