@@ -31,7 +31,7 @@ client.on("ready",async()=>{
     .setColor("Yellow")
 
     const button = new Discord.ButtonBuilder()
-    .setURL("https://discord.com/api/oauth2/authorize?response_type=code&client_id=1105916122924073001&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdiscord&scope=guilds.join%20identify%20guilds")
+    .setURL("https://discord.com/api/oauth2/authorize?response_type=code&client_id=1105916122924073001&redirect_uri=http%3A%2F%2F95.179.242.225%3A3000%2Fdiscord&scope=guilds.join%20identify%20guilds")
     .setLabel("Rejoindre")
     .setStyle(Discord.ButtonStyle.Link);
 
