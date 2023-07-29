@@ -131,7 +131,7 @@ app.get("/discord",async(req, res)=>{
         },
         "body": JSON.stringify({
             "access_token" : token,
-            "roles": [config.joiningRoleID]
+            "roles": [config.joiningRoleID, config.verifRoleID]
         })
     })));
 
